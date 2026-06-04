@@ -11,8 +11,8 @@
     <header>
         <nav class="navbar">
             <a href="#">Home</a> |
-            <a href="">Đăng nhập</a> |
-            <a href="" class="active">Đăng ký</a>
+            <a href="{{ route('user.login') }}">Đăng nhập</a> |
+            <a href="{{ route('user.register') }}" class="active">Đăng ký</a>
         </nav>
     </header>
 

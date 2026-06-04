@@ -10,6 +10,8 @@ Route::post('register', [CrudUserController::class, 'postUser'])->name('user.pos
 Route::get('login', [CrudUserController::class, 'login'])->name('user.login');
 Route::post('login', [CrudUserController::class, 'authUser'])->name('user.authUser');
 
+Route::get('list', [CrudUserController::class, 'list'])->name('user.list');
+
 Route::get('/', function () {
     return view('welcome');
 });
