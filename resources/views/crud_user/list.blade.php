@@ -32,7 +32,7 @@
                     <td>{{ $l->id }}</td>
                     <td>{{ $l->name }}</td>
                     <td>{{ $l->email }}</td>
-                    <td class="actions-cell"><a href="">Edit</a> | View | Delete</td>
+                    <td class="actions-cell"><a href="{{ route('user.update', ['id' => $l->id]) }}">Edit</a> | View | Delete</td>
                 </tr>
                 @empty
                 <tr>
