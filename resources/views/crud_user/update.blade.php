@@ -30,14 +30,14 @@
                     <input type="text" id="name" name="name" required value="{{ $user->name }}">
                 </div>
 
-                <div class="input-group">
+                {{-- <div class="input-group">
                     <label for="likes">Thích</label>
                     <input type="text" id="likes" name="likes" value="{{ $user->likes }}">
                 </div>
                 <div class="input-group">
                     <label for="dislikes">Ghét</label>
                     <input type="text" id="dislikes" name="dislikes" value="{{ $user->dislikes }}">
-                </div>
+                </div> --}}
 
                 <div class="input-group">
                     <label for="password">Mật khẩu</label>

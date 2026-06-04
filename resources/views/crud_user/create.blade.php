@@ -32,14 +32,14 @@
                     @endif
                 </div>
 
-                <div class="input-group">
+                {{-- <div class="input-group">
                     <label for="likes">Thích</label>
                     <input type="text" id="likes" name="likes">
                 </div>
                 <div class="input-group">
                     <label for="dislikes">Ghét</label>
                     <input type="text" id="dislikes" name="dislikes">
-                </div>
+                </div> --}}
 
                 <div class="input-group">
                     <label for="password">Mật khẩu</label>

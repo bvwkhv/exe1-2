@@ -31,7 +31,7 @@
                 <span>{{ $user->email }}</span>
             </div>
 
-            <div class="info-group">
+            {{-- <div class="info-group">
                 <label>Thích:</label>
                 <span>{{ $user->likes }}</span>
             </div>
@@ -39,7 +39,7 @@
             <div class="info-group">
                 <label>Ghét:</label>
                 <span>{{ $user->dislikes }}</span>
-            </div>
+            </div> --}}
 
             <div class="actions">
                 <a href="{{ route('user.update', ['id' => $user->id]) }}" class="btn-login">Chỉnh sửa</a>

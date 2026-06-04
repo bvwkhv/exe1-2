@@ -32,8 +32,8 @@ class CrudUserController extends Controller
             'name' => $request->username,
             'password' => Hash::make($request->password),
             'email' => $request->email,
-            'likes' => $request->likes,
-            'dislikes' => $request->dislikes,
+            // 'likes' => $request->likes,
+            // 'dislikes' => $request->dislikes,
         ]);
 
         return redirect()->route('user.login');
@@ -82,8 +82,8 @@ class CrudUserController extends Controller
         $user = User::find($input['id']);
         $user->name = $input['name'];
         $user->email = $input['email'];
-        $user->likes = $input['likes'];
-        $user->dislikes = $input['dislikes'];
+        // $user->likes = $input['likes'];
+        // $user->dislikes = $input['dislikes'];
         $user->password = $input['password'];
         $user->save();
 
