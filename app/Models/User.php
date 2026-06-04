@@ -16,8 +16,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'likes',
-        'dislikes',
+        // 'likes',
+        // 'dislikes',
     ];
 
     // Cách này cũng đủ, không cần dùng #[Hidden] bên trên class nữa
