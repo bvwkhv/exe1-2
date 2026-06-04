@@ -17,6 +17,8 @@ Route::post('update', [CrudUserController::class, 'postUpdate'])->name('user.pos
 
 Route::get('view/{id}', [CrudUserController::class, 'user_view'])->name('user.view');
 
+Route::get('/delete/{id}', [CrudUserController::class, 'delete'])->name('user.delete');
+
 Route::get('/', function () {
     return view('welcome');
 });

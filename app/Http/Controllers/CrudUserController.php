@@ -103,6 +103,19 @@ class CrudUserController extends Controller
         return view('crud_user.view', compact('user'));
     }
 
+    public function delete($id)
+    {
+        // Tìm user theo id và xóa
+        $user = User::find($id);
+
+        if ($user) {
+            $user->delete();
+            return redirect()->route('user.list')->with('success', 'Đã xóa người dùng thành công!');
+        }
+
+        return redirect()->route('user.list')->with('error', 'Không tìm thấy người dùng!');
+    }
+
     public function view()
     {
         return view('view');
