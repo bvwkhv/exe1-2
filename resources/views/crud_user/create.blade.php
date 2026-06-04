@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>Document</title>
 </head>
+
 <body>
     <!-- Navbar -->
     <header>
@@ -19,7 +21,7 @@
     <main class="login-container">
         <div class="login-box">
             <h1>Màn hình đăng ký</h1>
-            
+
             <form method="POST" action="{{ route('user.postUser') }}">
                 @csrf
                 <div class="input-group">
@@ -28,6 +30,15 @@
                     @if ($errors->has('username'))
                         <span class="text-danger">{{ $errors->first('name') }}</span>
                     @endif
+                </div>
+
+                <div class="input-group">
+                    <label for="likes">Thích</label>
+                    <input type="text" id="likes" name="likes">
+                </div>
+                <div class="input-group">
+                    <label for="dislikes">Ghét</label>
+                    <input type="text" id="dislikes" name="dislikes">
                 </div>
 
                 <div class="input-group">
@@ -63,4 +74,5 @@
         Lập trình web @01/2024
     </footer>
 </body>
+
 </html>
