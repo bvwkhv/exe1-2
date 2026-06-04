@@ -23,6 +23,8 @@
                     <th>#</th>
                     <th>Username</th>
                     <th>Email</th>
+                    <th>Thích</th>
+                    <th>Không thích</th>
                     <th>Thao tác</th>
                 </tr>
             </thead>
@@ -32,6 +34,8 @@
                     <td>{{ $l->id }}</td>
                     <td>{{ $l->name }}</td>
                     <td>{{ $l->email }}</td>
+                    <td>{{ $l->likes }}</td>
+                    <td>{{ $l->dislikes }}</td>
                     <td class="actions-cell"><a href="{{ route('user.update', ['id' => $l->id]) }}">Edit</a> | View | Delete</td>
                 </tr>
                 @empty

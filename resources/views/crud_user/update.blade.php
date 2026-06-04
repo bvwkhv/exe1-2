@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>Document</title>
 </head>
+
 <body>
     <!-- Navbar -->
     <header>
@@ -19,13 +21,22 @@
     <main class="login-container">
         <div class="login-box">
             <h1>Màn hình cập nhật</h1>
-            
+
             <form method="POST" action="{{ route('user.postUpdate') }}">
                 @csrf
-                <input name="id" type="hidden" value="{{$user->id}}">
+                <input name="id" type="hidden" value="{{ $user->id }}">
                 <div class="input-group">
                     <label for="username">Username</label>
                     <input type="text" id="name" name="name" required value="{{ $user->name }}">
+                </div>
+
+                <div class="input-group">
+                    <label for="likes">Thích</label>
+                    <input type="text" id="likes" name="likes" value="{{ $user->likes }}">
+                </div>
+                <div class="input-group">
+                    <label for="dislikes">Ghét</label>
+                    <input type="text" id="dislikes" name="dislikes" value="{{ $user->dislikes }}">
                 </div>
 
                 <div class="input-group">
@@ -55,4 +66,5 @@
         Lập trình web @01/2024
     </footer>
 </body>
+
 </html>
