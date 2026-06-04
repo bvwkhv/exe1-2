@@ -15,11 +15,13 @@ class CrudUserController extends Controller
 {
 
     //giao diện crud
-    public function register(){
+    public function register()
+    {
         return view('crud_user.create');
     }
 
-    public function postUser(Request $request){
+    public function postUser(Request $request)
+    {
         $request->validate([
             'username' => 'required|String',
             'password' => 'required|min:6|confirmed',
@@ -37,11 +39,13 @@ class CrudUserController extends Controller
         return redirect()->route('user.login');
     }
 
-    public function login(){
+    public function login()
+    {
         return view('crud_user.login');
     }
 
-    public function authUser(Request $request){
+    public function authUser(Request $request)
+    {
         $request->validate([
             'name' => 'required',
             'password' => 'required',
@@ -57,19 +61,21 @@ class CrudUserController extends Controller
         return redirect("crud_user.login")->withSuccess('Login details are not valid');
     }
 
-    public function update(Request $request){
+    public function update(Request $request)
+    {
         $user_id = $request->id;
         $user = User::find($user_id);
 
         return view('crud_user.update', ['user' => $user]);
     }
 
-    public function postUpdate(Request $request){
-    $input = $request->all();
+    public function postUpdate(Request $request)
+    {
+        $input = $request->all();
 
         $request->validate([
             'name' => 'required',
-            'email' => 'required|email|unique:users,id,'.$input['id'],
+            'email' => 'required|email|unique:users,id,' . $input['id'],
             'password' => 'required|min:6',
         ]);
 
@@ -84,13 +90,21 @@ class CrudUserController extends Controller
         return redirect()->route('user.list')->withSuccess('You have signed-in');
     }
 
-    public function list(){
+    public function list()
+    {
         $list = User::all();
 
         return view('crud_user.list', compact('list'));
     }
 
-    public function view(){
+    public function user_view($id)
+    {
+        $user = User::findOrFail($id);
+        return view('crud_user.view', compact('user'));
+    }
+
+    public function view()
+    {
         return view('view');
     }
 }
