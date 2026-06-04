@@ -77,7 +77,7 @@ class CrudUserController extends Controller
         $user->password = $input['password'];
         $user->save();
 
-        return redirect("crud_user.list")->withSuccess('You have signed-in');
+        return redirect()->route('user.list')->withSuccess('You have signed-in');
     }
 
     public function list(){
