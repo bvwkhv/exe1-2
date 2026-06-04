@@ -36,7 +36,7 @@
                     <td>{{ $l->email }}</td>
                     <td>{{ $l->likes }}</td>
                     <td>{{ $l->dislikes }}</td>
-                    <td class="actions-cell"><a href="{{ route('user.update', ['id' => $l->id]) }}">Edit</a> | View | Delete</td>
+                    <td class="actions-cell"><a href="{{ route('user.update', ['id' => $l->id]) }}">Edit</a> | <a href="{{ route('user.view', ['id' => $l->id]) }}">View</a> | Delete</td>
                 </tr>
                 @empty
                 <tr>
